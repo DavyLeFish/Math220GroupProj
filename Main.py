@@ -34,9 +34,13 @@ class Main():
     
     def NumOfTests(self):
         rng=Abs(self.max-self.min)
-        ttl=(rng)^(self.n)
-        if ttl>=100:
+        ttl=(rng)**(self.n)
+        if ttl>= 1000:
+            self.runs = math.ceil(0.01*ttl)
+        elif ttl>=150:
             self.runs = math.ceil(0.1*ttl)
+        elif ttl>=30:
+            self.runs = math.ceil(0.5*ttl)
         else:
             self.runs = ttl
 
@@ -96,5 +100,6 @@ class MtrxPrt():
         return(self.mtrx)
     def GetInvrtMtrx(self):
         return(self.invrtmtrx)
+
 
 Main().Start()
