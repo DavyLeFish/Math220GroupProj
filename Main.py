@@ -33,11 +33,9 @@ class Main():
         (P.GetTally()/self.runs),"%")
     
     def NumOfTests(self):
-        rng=Abs(self.max-self.min)
-        ttl=(rng)**(self.n)
+        rng=Abs(self.max-self.min)+1
+        ttl=(rng)**((self.n)**2)
         if ttl>= 1000:
-            self.runs = math.ceil(0.01*ttl)
-        elif ttl>=150:
             self.runs = math.ceil(0.1*ttl)
         elif ttl>=30:
             self.runs = math.ceil(0.5*ttl)
@@ -103,3 +101,4 @@ class MtrxPrt():
 
 
 Main().Start()
+
