@@ -11,15 +11,9 @@ class Main():
         self.runs = 0
 
     def Start(self):
-        choice = int(input("1 for set matrix. 2 for random matrix\n"))
         self.n = int(input("What nxn matrix would you like?\n"))
-        if choice == 1:
-            self.min,self.max=MtrxPrt().CrtMtrx(self.n)
-        elif choice == 2:
-            self.min = int(input("What is the lower bound for the elements value?\n"))
-            self.max = int(input("What is the upper bound for the elements value?\n"))
-        else:
-            self.Start()
+        self.min = int(input("What is the lower bound for the elements value?\n"))
+        self.max = int(input("What is the upper bound for the elements value?\n"))
         self.NumOfTests()
         c=self.runs
         while c != 0:
@@ -101,4 +95,5 @@ class MtrxPrt():
 
 
 Main().Start()
+
 
