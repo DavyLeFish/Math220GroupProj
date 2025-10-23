@@ -40,15 +40,13 @@ class Main():
         rng=Abs(self.max-self.min)+1
 #Gets total of different possible matrices
         ttl=(rng)**((self.n)**2)
-#Limits the amount of runs (Does not work with current code layout as anything above 600 possibilites
-    #produces run depth error
+#Limits the amount of runs
         if ttl>=10000:
             self.runs = math.ceil(0.1*ttl)
         elif ttl>=1000:
             self.runs = math.ceil(0.5*ttl)
         else:
             self.runs = ttl
-        self.runs = ttl
 
 class MtrxPrt():
     def __init__(self):
@@ -129,4 +127,5 @@ class Graph():
     
 
 Main().Start()
+
 
